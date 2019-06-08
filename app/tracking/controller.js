@@ -12,7 +12,7 @@ export default Controller.extend({
         yesGoodDay(){
             //send userid, date and hadAttack of 0 to database
             
-            const newGoodDay = this.store.createRecord('tracking', { hadAttack: 0 }, { date: this.getDate() }, { userId: 1 });
+            const newGoodDay = this.store.createRecord('tracking', { hadAttack: 0, date: this.getDate(),  userId: 1  });
             newGoodDay.save();
 
             this.set('responseMessage', 'YAY for Linus and his lungs!!');
@@ -21,7 +21,7 @@ export default Controller.extend({
         noBadDay(){
             //send userid, date and hadAttack of 1 to database
 
-            const newBadDay = this.store.createRecord('tracking', { hadAttack: 1 }, { date: this.getDate() }, { userId: 1 });
+            const newBadDay = this.store.createRecord('tracking', { hadAttack: 1, date: this.getDate(),  userId: 1  });
             newBadDay.save();
             
             this.set('responseMessage', 'Too bad, hopefully tomorrow is better.');
