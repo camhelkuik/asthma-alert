@@ -6,6 +6,24 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey: "AIzaSyB5r5IbqbvmzHodmYOL_6459BosylWT0oo",
+      authDomain: "asthma-alert-43b43.firebaseapp.com",
+      databaseURL: "https://asthma-alert-43b43.firebaseio.com",
+      projectId: "asthma-alert-43b43",
+      storageBucket: "",
+      messagingSenderId: "201070301405",
+      appId: "1:201070301405:web:65c15bfd4b3b6cb3"
+    },
+
+    // if using ember-cli-content-security-policy
+    // contentSecurityPolicy: {
+    //  'script-src': "'self' 'unsafe-eval' apis.google.com",
+    //  'frame-src': "'self' https://*.firebaseapp.com",
+    //  'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    // },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
