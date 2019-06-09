@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    date: DS.attr('date'),
+    date: DS.attr('string'),
     grassValue: DS.attr('number'),
     treeValue: DS.attr('number'),
     plantGraminalesValue: DS.attr('number'),

@@ -1,0 +1,35 @@
+<div class="jumbotron text-center">
+  <h1>Daily Pollen Levels</h1>
+
+  <div class="form-horizontal form-group form-group-lg row">
+    <div>
+      <button class="btn btn-primary btn-lg" {{action "getDailyPollen"}}>Get Daily Pollen</button>
+    </div>
+  </div>
+
+  {{#if hasPollenData}}
+    <div class="alert alert-sucess">
+      <h3> Today's Date: {{pollenData.date}}</h3>
+    </div>
+
+    <div class="alert alert-sucess">
+      <h4>Generic Values</h4>
+      <p>Grass Value: {{pollenData.grassValue}}</p>
+      <p>Tree Value: {{pollenData.treeValue}}</p>
+    </div>
+
+    <div class="alert alert-sucess">
+      <h4>Plant Values</h4>
+      <p>Graminales Value: {{pollenData.plantGraminalesValue}}</p>
+      <p>Juniper Value: {{pollenData.plantJuniperValue}}</p>
+      <p>Elm Value: {{pollenData.plantElmValue}}</p>
+      <p>Oak Value: {{pollenData.plantOakValue}}</p>
+      <p>Pine Value: {{pollenData.plantPineValue}}</p>
+      <p>Cottonwood Value: {{pollenData.plantCottonWoodValue}}</p>
+      <p>Birch Value: {{pollenData.plantBirchValue}}</p>
+      <p>Ash Value: {{pollenData.plantAshValue}}</p>
+      <p>Maple Value: {{pollenData.plantMapleValue}}</p>
+    </div>
+  {{/if}}
+
+</div>

@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('about');
   this.route('tracking');
+  this.route('daily-pollen');
 });
 
 export default Router;
