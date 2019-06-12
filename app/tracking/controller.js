@@ -4,8 +4,23 @@ export default Controller.extend({
 
     responseMessage: '',
     getDate() {
-        let d = new Date().toISOString().split('T')[0];
-        return d;
+        let today = new Date();
+        let yesterday = new Date(today);
+        
+        yesterday.setDate(today.getDate() - 1);
+
+        let dd = yesterday.getDate();
+        let mm = yesterday.getMonth()+1; //January is 0!
+        let yyyy = yesterday.getFullYear();
+        
+        if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<10){
+            mm='0'+mm
+        } 
+        yesterday = yyyy+'-'+mm+'-'+dd;
+        return yesterday;
     },
 
     actions:{
