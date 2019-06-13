@@ -7,7 +7,7 @@ export function pollenValue([params]/*, hash*/) {
     case 2:
       return "Low";
     case 3:
-      return "Medium";
+      return "Moderate";
     case 4:
       return "High";
     case 5:

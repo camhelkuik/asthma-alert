@@ -1,7 +1,11 @@
+{{#if authManager.currentUser}}
+  Logged in as {{authManager.currentUser.email}}
+{{/if}}
+
 <div class="jumbotron text-center">
   <h1>Asthma Tracking</h1>
 
-  <h3>Did Linus have a good lung day?</h3>
+  <h3>Did Linus have a good lung yesterday?</h3>
 
   <div class="form-horizontal form-group form-group-lg row">
     <div>

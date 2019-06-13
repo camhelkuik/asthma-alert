@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('tracking');
   this.route('daily-pollen');
+  this.route('login');
 });
 
 export default Router;
