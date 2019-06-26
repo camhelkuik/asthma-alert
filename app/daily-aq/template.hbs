@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+  <h1>Daily Air Quality Levels</h1>
+
+  <div class="form-horizontal form-group form-group-lg row">
+    <div>
+      <button class="btn btn-primary btn-lg" {{action "getDailyAq"}}>Get Daily Air Quality</button>
+    </div>
+  </div>
+
+  {{#if hasAqData}}
+    <div class="alert alert-sucess">
+      <h3> Today's Date: {{aqData.date}}</h3>
+    </div>
+
+    <div class="alert alert-sucess">
+      <h4>Air Quality Numbers</h4>
+      <p>Ozone Number: {{aqData.ozoneAQI}}</p>
+      <p>Fine Particle (2.5 microns) Number: {{aqData.fineParticleAQI}}</p>
+      <p>Combined Number: {{aqData.combinedAQI}}</p>
+    </div>
+
+    <div class="alert alert-sucess">
+      <h4>Air Quality Values</h4>
+      <p>Ozone Value: {{aq-value aqData.ozoneCategory}}</p>
+      <p>Fine Particle (2.5 microns) Value: {{aq-value aqData.fineParticleCategory}}</p>
+      <p>Combined Value: {{aq-value aqData.combinedCategory}}</p>
+    </div>
+  {{/if}}
+
+</div>

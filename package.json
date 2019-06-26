@@ -22,7 +22,7 @@
     "@ember/optional-features": "^0.6.3",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.1.0",
-    "ember-cli": "~3.4",
+    "ember-cli": "^3.10.1",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^6.16.0",
     "ember-cli-bootstrap-sassy": "^0.5.8",
@@ -52,5 +52,9 @@
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "dependencies": {
+    "ember-cli-cors": "0.0.2",
+    "npm": "^6.9.0"
   }
 }

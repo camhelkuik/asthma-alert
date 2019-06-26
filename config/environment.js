@@ -17,11 +17,11 @@ module.exports = function(environment) {
       appId: "1:201070301405:web:65c15bfd4b3b6cb3"
     },
 
-    // if using ember-cli-content-security-policy
+    //if using ember-cli-content-security-policy
     // contentSecurityPolicy: {
     //  'script-src': "'self' 'unsafe-eval' apis.google.com",
-    //  'frame-src': "'self' https://*.firebaseapp.com",
-    //  'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    //  'frame-src': ["'self' https://*.firebaseapp.com", "http://*.airnowapi.org"],
+    //  'connect-src': ["'self' wss://*.firebaseio.com https://*.googleapis.com", "http://*.airnowapi.org"]
     // },
 
     EmberENV: {
