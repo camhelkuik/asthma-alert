@@ -1,0 +1,31 @@
+<div class="jumbotron text-center">
+  <h1>Daily Air Quality Levels</h1>
+
+  <div class="form-horizontal form-group form-group-lg row">
+    <div>
+      <button class="btn btn-primary btn-lg" {{action "getDailyAq"}}>Get Daily Air Quality</button>
+    </div>
+  </div>
+
+  {{#if hasAqData}}
+    <div class="alert alert-sucess">
+      <h3> Today's Date: {{humanDate}}</h3>
+    </div>
+
+    <div class="alert alert-sucess">
+      <h4>Asthma Level</h4>
+      <p>Asthma: {{asthmaCategory}}</p>
+    </div>
+
+    <div class="alert alert-sucess">
+      <h4>Air Quality and Pollen Values</h4>
+      <p>Ozone Value: {{aqData.ozoneCategory}}</p>
+      <p>Grass Value: {{aq-value aqData.grass}}</p>
+      <p>Mold Value: {{aq-value aqData.mold}}</p>
+      <p>Ragweed Value: {{aq-value aqData.ragweed}}</p>
+      <p>Tree Value: {{aq-value aqData.tree}}</p>
+      <p>Dust and Dander Value: {{dustDanderCategory}}</p>
+    </div>
+  {{/if}}
+
+</div>
