@@ -9,21 +9,22 @@
 
   {{#if hasAqData}}
     <div class="alert alert-sucess">
-      <h3> Today's Date: {{aqData.date}}</h3>
+      <h3> Today's Date: {{humanDate}}</h3>
     </div>
 
     <div class="alert alert-sucess">
-      <h4>Air Quality Numbers</h4>
-      <p>Ozone Number: {{aqData.ozoneAQI}}</p>
-      <p>Fine Particle (2.5 microns) Number: {{aqData.fineParticleAQI}}</p>
-      <p>Combined Number: {{aqData.combinedAQI}}</p>
+      <h4>Asthma Level</h4>
+      <p>Asthma: {{asthmaCategory}}</p>
     </div>
 
     <div class="alert alert-sucess">
-      <h4>Air Quality Values</h4>
-      <p>Ozone Value: {{aq-value aqData.ozoneCategory}}</p>
-      <p>Fine Particle (2.5 microns) Value: {{aq-value aqData.fineParticleCategory}}</p>
-      <p>Combined Value: {{aq-value aqData.combinedCategory}}</p>
+      <h4>Air Quality and Pollen Values</h4>
+      <p>Ozone Value: {{aqData.ozoneCategory}}</p>
+      <p>Grass Value: {{aq-value aqData.grass}}</p>
+      <p>Mold Value: {{aq-value aqData.mold}}</p>
+      <p>Ragweed Value: {{aq-value aqData.ragweed}}</p>
+      <p>Tree Value: {{aq-value aqData.tree}}</p>
+      <p>Dust and Dander Value: {{dustDanderCategory}}</p>
     </div>
   {{/if}}
 
