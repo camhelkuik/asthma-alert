@@ -39,7 +39,7 @@ export default Controller.extend({
             const newBadDay = this.store.createRecord('tracking', { hadAttack: 1, date: this.getDate(),  userId: 1  });
             newBadDay.save();
             
-            this.set('responseMessage', 'Too bad, hopefully tomorrow is better.');
+            this.set('responseMessage', 'Too bad, hopefully today is better.');
         }
     }
 });
