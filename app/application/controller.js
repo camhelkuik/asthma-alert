@@ -5,7 +5,7 @@ export default Controller.extend({
     session: service(),
 
     actions: {
-        invalidateSession() {
+        logout() {
             this.get('session').invalidate();
         }
     }

@@ -18,9 +18,10 @@
           {{#link-to "tracking" tagName="li"}}<a href="">Tracking</a>{{/link-to}}
           {{#link-to "daily-aq" tagName="li"}}<a href="">Daily Air Quality</a>{{/link-to}}
           {{#if session.isAuthenticated}}
-            <a href=""{{action "invalidateSession"}}>Logout</a>
+            <a href=""{{action "logout"}}>Logout</a>
           {{else}}
             {{#link-to "login" tagName="li"}}<a href="">Login</a>{{/link-to}}
+            {{#link-to "signup" tagName="li"}}<a href="">Signup</a>{{/link-to}}
           {{/if}}
         </ul>
       </div>

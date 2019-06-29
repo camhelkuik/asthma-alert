@@ -11,9 +11,7 @@ Router.map(function() {
   this.route('login');
   this.route('tracking');
   this.route('daily-aq');
-  this.route('authenticated', { path: '' }, function() {
-
-  })
+  this.route('signup');
 });
 
 export default Router;
