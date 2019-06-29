@@ -7,8 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/'});
+  this.route('login');
   this.route('tracking');
   this.route('daily-aq');
+  this.route('authenticated', { path: '' }, function() {
+
+  })
 });
 
 export default Router;

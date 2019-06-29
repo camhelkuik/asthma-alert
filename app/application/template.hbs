@@ -17,6 +17,11 @@
           {{#link-to "index" tagName="li"}}<a href="">Home</a>{{/link-to}}
           {{#link-to "tracking" tagName="li"}}<a href="">Tracking</a>{{/link-to}}
           {{#link-to "daily-aq" tagName="li"}}<a href="">Daily Air Quality</a>{{/link-to}}
+          {{#if session.isAuthenticated}}
+            <a href=""{{action "invalidateSession"}}>Logout</a>
+          {{else}}
+            {{#link-to "login" tagName="li"}}<a href="">Login</a>{{/link-to}}
+          {{/if}}
         </ul>
       </div>
     </div>
