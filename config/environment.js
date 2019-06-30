@@ -18,11 +18,15 @@ module.exports = function(environment) {
     },
 
     //if using ember-cli-content-security-policy
-    // contentSecurityPolicy: {
-    //  'script-src': "'self' 'unsafe-eval' apis.google.com",
-    //  'frame-src': ["'self' https://*.firebaseapp.com", "http://*.airnowapi.org"],
-    //  'connect-src': ["'self' wss://*.firebaseio.com https://*.googleapis.com", "http://*.airnowapi.org"]
-    // },
+    contentSecurityPolicy: {
+     'default-src': "'none'",
+     'script-src': "'self' 'unsafe-eval' apis.google.com",
+     'frame-src': "'self' https://*.firebaseapp.com",
+     'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com",
+     'img-src': "'self'",
+     'report-uri':"'localhost'",
+     'style-src': "'self' 'unsafe-inline'",
+    },
 
     EmberENV: {
       FEATURES: {
