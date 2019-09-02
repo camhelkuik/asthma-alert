@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using JsonApiDotNetCore.Models;
-using Microsoft.AspNetCore.Identity;
 
 namespace AsthmaAlertApi.Models
 {
@@ -12,5 +10,8 @@ namespace AsthmaAlertApi.Models
 
         [Attr("last-name")]
         public string LastName { get; set; }
+
+        [HasMany("tracking-items")]
+        public virtual List<TrackingItem> TrackingItems { get; set; }
     }
 }
