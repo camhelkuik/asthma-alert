@@ -13,5 +13,7 @@ namespace  AsthmaAlertApi.Data
         public DbSet<Person> People { get; set; }
 
         public DbSet<TrackingItem> TrackingItems { get; set; }
+
+        public DbSet<DailyAq> DailyAqs { get; set; }
     }
 }

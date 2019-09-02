@@ -9,7 +9,11 @@ namespace AsthmaAlertApi.Models
 
         [Attr("date")]
         public string Date { get; set; }
-        
+
+        //for example this would be like who I am trakcing, eg Linus
+        [Attr("trakcing-title")]
+        public string TrackingTitle { get; set; }
+
         public int OwnerId { get; set; }
         [HasOne("person")]
         public virtual Person Owner { get; set; }
