@@ -12198,11 +12198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/camhelkuik/non-icloud/Projects/asthma-alert/AsthmaAlertApi/AsthmaAlertApi/AsthmaAlertApi/AsthmaAlertApi.csproj",
+      "projectUniqueName": "/Users/camhelkuik/non-icloud/Projects/asthma-alert/AsthmaAlertApi/AsthmaAlertApi.csproj",
       "projectName": "AsthmaAlertApi",
-      "projectPath": "/Users/camhelkuik/non-icloud/Projects/asthma-alert/AsthmaAlertApi/AsthmaAlertApi/AsthmaAlertApi/AsthmaAlertApi.csproj",
+      "projectPath": "/Users/camhelkuik/non-icloud/Projects/asthma-alert/AsthmaAlertApi/AsthmaAlertApi.csproj",
       "packagesPath": "/Users/camhelkuik/.nuget/packages/",
-      "outputPath": "/Users/camhelkuik/non-icloud/Projects/asthma-alert/AsthmaAlertApi/AsthmaAlertApi/AsthmaAlertApi/obj/",
+      "outputPath": "/Users/camhelkuik/non-icloud/Projects/asthma-alert/AsthmaAlertApi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
