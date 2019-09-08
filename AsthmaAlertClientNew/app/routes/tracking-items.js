@@ -2,6 +2,6 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
     model(){
-        this.store.findAll('tracking-item');
+       return this.store.findAll('tracking-item');
     }
 });
