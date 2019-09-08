@@ -30,7 +30,7 @@ namespace AsthmaAlertApi
             //     options.MinimumSameSitePolicy = SameSiteMode.None;
             // });
 
-
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(GetConnectionString()));
             services.AddJsonApi<AppDbContext>(opt => opt.Namespace = "api/v1");
@@ -41,6 +41,7 @@ namespace AsthmaAlertApi
         {
             if (env.IsDevelopment())
             {
+                app.UseCors(builder => builder.WithOrigins("http://localhost:4200"));
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -53,7 +54,7 @@ namespace AsthmaAlertApi
             // app.UseHttpsRedirection();
             // app.UseStaticFiles();
             // app.UseCookiePolicy();
-
+            
             app.UseJsonApi();
         }
 
