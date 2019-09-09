@@ -10,12 +10,13 @@ namespace AsthmaAlertApi.Models
         [Attr("date")]
         public string Date { get; set; }
 
-        //for example this would be like who I am trakcing, eg Linus
+        //for example this would be like who I am trakcing, eg Linus*
         [Attr("tracking-title")]
         public string TrackingTitle { get; set; }
 
-        public int OwnerId { get; set; }
-        [HasOne("person")]
-        public virtual Person Owner { get; set; }
+        public string OwnerId { get; set; }
+        
+        [HasOne("owner")]
+        public virtual ApplicationUser Owner { get; set; }
     }
 }
