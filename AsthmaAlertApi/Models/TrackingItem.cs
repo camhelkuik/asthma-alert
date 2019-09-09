@@ -15,7 +15,8 @@ namespace AsthmaAlertApi.Models
         public string TrackingTitle { get; set; }
 
         public int OwnerId { get; set; }
-        [HasOne("person")]
-        public virtual Person Owner { get; set; }
+        
+        [HasOne("owner")]
+        public virtual ApplicationUser Owner { get; set; }
     }
 }

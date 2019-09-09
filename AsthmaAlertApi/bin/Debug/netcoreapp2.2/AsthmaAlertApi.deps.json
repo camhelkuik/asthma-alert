@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "65b6f8d24d9843e8ace032f0f8dfa30a7e6be1a6"
+    "signature": "bd7bcbc2dd068b85b0beb4234befa30d0bed5294"
   },
   "compilationOptions": {
     "defines": [
@@ -28,13 +28,91 @@
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.2.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.2.0",
+          "OpenIddict": "2.0.0",
+          "OpenIddict.EntityFrameworkCore": "2.0.0"
         },
         "runtime": {
           "AsthmaAlertApi.dll": {}
         },
         "compile": {
           "AsthmaAlertApi.dll": {}
+        }
+      },
+      "AspNet.Security.OAuth.Validation/2.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNet.Security.OAuth.Validation.dll": {}
+        }
+      },
+      "AspNet.Security.OpenIdConnect.Extensions/2.0.0": {
+        "dependencies": {
+          "AspNet.Security.OpenIdConnect.Primitives": "2.0.0",
+          "Microsoft.AspNetCore.Authentication": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Extensions.dll": {}
+        }
+      },
+      "AspNet.Security.OpenIdConnect.Primitives/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNet.Security.OpenIdConnect.Primitives.dll": {}
+        }
+      },
+      "AspNet.Security.OpenIdConnect.Server/2.0.0": {
+        "dependencies": {
+          "AspNet.Security.OpenIdConnect.Extensions": "2.0.0",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.3.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/AspNet.Security.OpenIdConnect.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/AspNet.Security.OpenIdConnect.Server.dll": {}
+        }
+      },
+      "CryptoHelper/3.0.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CryptoHelper.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/CryptoHelper.dll": {}
         }
       },
       "JsonApiDotNetCore/1.0.0": {
@@ -86,6 +164,137 @@
         },
         "compile": {
           "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
+      "OpenIddict/2.0.0": {
+        "dependencies": {
+          "OpenIddict.Abstractions": "2.0.0",
+          "OpenIddict.Core": "2.0.0",
+          "OpenIddict.Mvc": "2.0.0",
+          "OpenIddict.Server": "2.0.0",
+          "OpenIddict.Validation": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.dll": {}
+        }
+      },
+      "OpenIddict.Abstractions/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Collections.Immutable": "1.5.0",
+          "System.ComponentModel.Annotations": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.Abstractions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.Abstractions.dll": {}
+        }
+      },
+      "OpenIddict.Core/2.0.0": {
+        "dependencies": {
+          "CryptoHelper": "3.0.2",
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0",
+          "OpenIddict.Abstractions": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.Core.dll": {}
+        }
+      },
+      "OpenIddict.EntityFrameworkCore/2.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
+          "OpenIddict.Core": "2.0.0",
+          "OpenIddict.EntityFrameworkCore.Models": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.dll": {}
+        }
+      },
+      "OpenIddict.EntityFrameworkCore.Models/2.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.Models.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.EntityFrameworkCore.Models.dll": {}
+        }
+      },
+      "OpenIddict.Mvc/2.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "OpenIddict.Server": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.Mvc.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
+        }
+      },
+      "OpenIddict.Server/2.0.0": {
+        "dependencies": {
+          "AspNet.Security.OpenIdConnect.Server": "2.0.0",
+          "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "Newtonsoft.Json.Bson": "1.0.1",
+          "OpenIddict.Abstractions": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.Server.dll": {}
+        }
+      },
+      "OpenIddict.Validation/2.0.0": {
+        "dependencies": {
+          "AspNet.Security.OAuth.Validation": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "OpenIddict.Abstractions": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenIddict.Validation.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenIddict.Validation.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {},
@@ -3283,6 +3492,41 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AspNet.Security.OAuth.Validation/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LBk+uCaZqmI4W1F3KOyVMRkHFErj97f8WeJpJ8toX+chNR677okBwikn4wGrzvn9fqd5w61lb6/npCu3MhnFMg==",
+      "path": "aspnet.security.oauth.validation/2.0.0",
+      "hashPath": "aspnet.security.oauth.validation.2.0.0.nupkg.sha512"
+    },
+    "AspNet.Security.OpenIdConnect.Extensions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+ny2u6wnYr71GeZsUKM4RkNkY49nEfVboI4wwaLti4nHjXoGmRLRrx2sVBSzTULU9j+GRWFi1Mwfyk/A6OCSMg==",
+      "path": "aspnet.security.openidconnect.extensions/2.0.0",
+      "hashPath": "aspnet.security.openidconnect.extensions.2.0.0.nupkg.sha512"
+    },
+    "AspNet.Security.OpenIdConnect.Primitives/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XJigghZYrmRK/dhNhoJfcrzW9TgwInMAeWZ3T6YZrt2cxVdGNBpeMGFz3q+2XvTQj0fOzEp4loFib2xlfTLPxg==",
+      "path": "aspnet.security.openidconnect.primitives/2.0.0",
+      "hashPath": "aspnet.security.openidconnect.primitives.2.0.0.nupkg.sha512"
+    },
+    "AspNet.Security.OpenIdConnect.Server/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4UqMSjq5Z7qZwNmVLnIEpYH7PKlsC6lC5qUc3lioBSG41kPGarJEIIM4J5hyBY1gptki0i+2H0jFIri7Z8H4sQ==",
+      "path": "aspnet.security.openidconnect.server/2.0.0",
+      "hashPath": "aspnet.security.openidconnect.server.2.0.0.nupkg.sha512"
+    },
+    "CryptoHelper/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6xFZdEnhuOmX58TgZAeb20MbddsL8/nR/4CnWhmjMXv9gfpOxD+1bBU7IDtYq2Q8rZJUT6xYWdhW16bKriU2Mw==",
+      "path": "cryptohelper/3.0.2",
+      "hashPath": "cryptohelper.3.0.2.nupkg.sha512"
+    },
     "JsonApiDotNetCore/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3303,6 +3547,62 @@
       "sha512": "sha512-gUHdEtuJ8JR//bLMBzsu6WZOO858Jfli1BEoMcEv3ehgcU4ibdwEXUNt2b0Xs0MJmZ031wTDGasmdFEXH2KAjw==",
       "path": "npgsql.entityframeworkcore.postgresql/2.2.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.2.2.0.nupkg.sha512"
+    },
+    "OpenIddict/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fuTdmX5nBKqQHeZDOhXrbshGkv+uLcORHVB3IE45SiidSEvJDi60PFwnvU7JrxFvEqF9zoyPkLhzl43i8FvOLg==",
+      "path": "openiddict/2.0.0",
+      "hashPath": "openiddict.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.Abstractions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-crVAJW8JFtkbR2oVWr1Z4aZSi36e6uts7RISAXF4RFcXEbpPxafJMTsB/ThWJZ6cTxgolnzHJeumKtdsrAkaGg==",
+      "path": "openiddict.abstractions/2.0.0",
+      "hashPath": "openiddict.abstractions.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.Core/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-heO1CEOGQjeEO5Yn5d0QN3XCQUQ3Zy32HGeUpuzWsrSer6zPTTFx2nhFwml85ZhNbo+c2o2y68vm2CLlgwoc0A==",
+      "path": "openiddict.core/2.0.0",
+      "hashPath": "openiddict.core.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.EntityFrameworkCore/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OMsMHuZMDya4FofCY1TaK0Njgir+/MwT+Rue2UDB/BL0FJGSKslizNTmvXYMjuY2TkyUaQBtL4oVgdLjbwbO8Q==",
+      "path": "openiddict.entityframeworkcore/2.0.0",
+      "hashPath": "openiddict.entityframeworkcore.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.EntityFrameworkCore.Models/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IAGOYuaJWD2bBKKDcR8yco4hU+Qw7seq/8xUxvxP1QbY+/ORVgY9YCgqjXTisB4ER52k32kYez8JiGYjbG/8vA==",
+      "path": "openiddict.entityframeworkcore.models/2.0.0",
+      "hashPath": "openiddict.entityframeworkcore.models.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.Mvc/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-42cvtNR90QqrpmjR8ATw2aC4ogaBV/IxC27gla+wip+2Y7ncI9ixvL8T0Ylr2phniiDABt8IZevaisXQxt9ytA==",
+      "path": "openiddict.mvc/2.0.0",
+      "hashPath": "openiddict.mvc.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.Server/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hBxiLBzBAWHs4LXdT3TxKX+Yn45sA7I8EyTEgaDxl5h9PFU/4nJVVwPXvnvmnCMMWeakJVmZhYkrL50hqF0q+g==",
+      "path": "openiddict.server/2.0.0",
+      "hashPath": "openiddict.server.2.0.0.nupkg.sha512"
+    },
+    "OpenIddict.Validation/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tK/WQ43TN7vdSrj9FKLrWWu4TRHTr8+lBIiFJO4c+I7JHL8PHYBWtJglVisRSSw76N2Rw0YxjpempHR/9Gj7Tw==",
+      "path": "openiddict.validation/2.0.0",
+      "hashPath": "openiddict.validation.2.0.0.nupkg.sha512"
     },
     "System.ValueTuple/4.5.0": {
       "type": "package",

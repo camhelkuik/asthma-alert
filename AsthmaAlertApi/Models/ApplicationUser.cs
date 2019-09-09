@@ -1,10 +1,17 @@
 using System.Collections.Generic;
 using JsonApiDotNetCore.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace AsthmaAlertApi.Models
 {
-    public class Person : Identifiable
+    public class ApplicationUser : IdentityUser, IIdentifiable<string>
     {
+        object IIdentifiable.Id
+        {
+            get { return Id; }
+            set { Id = value.ToString(); }
+        }
+
         [Attr("first-name")]
         public string FirstName { get; set; }
 
