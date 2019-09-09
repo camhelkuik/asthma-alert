@@ -4,26 +4,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace AsthmaAlertApi.Migrations
 {
-    public partial class AddIdentity : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_TrackingItems_People_OwnerId",
-                table: "TrackingItems");
-
-            migrationBuilder.DropTable(
-                name: "People");
-
-            migrationBuilder.DropIndex(
-                name: "IX_TrackingItems_OwnerId",
-                table: "TrackingItems");
-
-            migrationBuilder.AddColumn<string>(
-                name: "OwnerId1",
-                table: "TrackingItems",
-                nullable: true);
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -63,6 +47,29 @@ namespace AsthmaAlertApi.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DailyAqs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Date = table.Column<string>(nullable: true),
+                    OzoneValue = table.Column<int>(nullable: false),
+                    OzoneCategory = table.Column<string>(nullable: true),
+                    Grass = table.Column<int>(nullable: false),
+                    Mold = table.Column<int>(nullable: false),
+                    Ragweed = table.Column<int>(nullable: false),
+                    Tree = table.Column<int>(nullable: false),
+                    AsthmaValue = table.Column<int>(nullable: false),
+                    AsthmaCategory = table.Column<string>(nullable: true),
+                    DustDanderValue = table.Column<int>(nullable: false),
+                    DustDanderCategory = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DailyAqs", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -210,6 +217,28 @@ namespace AsthmaAlertApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "TrackingItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    HadAttack = table.Column<int>(nullable: false),
+                    Date = table.Column<string>(nullable: true),
+                    TrackingTitle = table.Column<string>(nullable: true),
+                    OwnerId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TrackingItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TrackingItems_AspNetUsers_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OpenIddictAuthorizations",
                 columns: table => new
                 {
@@ -266,11 +295,6 @@ namespace AsthmaAlertApi.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TrackingItems_OwnerId1",
-                table: "TrackingItems",
-                column: "OwnerId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -342,21 +366,14 @@ namespace AsthmaAlertApi.Migrations
                 table: "OpenIddictTokens",
                 columns: new[] { "ApplicationId", "Status", "Subject", "Type" });
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_TrackingItems_AspNetUsers_OwnerId1",
+            migrationBuilder.CreateIndex(
+                name: "IX_TrackingItems_OwnerId",
                 table: "TrackingItems",
-                column: "OwnerId1",
-                principalTable: "AspNetUsers",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
+                column: "OwnerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_TrackingItems_AspNetUsers_OwnerId1",
-                table: "TrackingItems");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -373,57 +390,28 @@ namespace AsthmaAlertApi.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "DailyAqs");
+
+            migrationBuilder.DropTable(
                 name: "OpenIddictScopes");
 
             migrationBuilder.DropTable(
                 name: "OpenIddictTokens");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "TrackingItems");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "OpenIddictAuthorizations");
 
             migrationBuilder.DropTable(
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
                 name: "OpenIddictApplications");
-
-            migrationBuilder.DropIndex(
-                name: "IX_TrackingItems_OwnerId1",
-                table: "TrackingItems");
-
-            migrationBuilder.DropColumn(
-                name: "OwnerId1",
-                table: "TrackingItems");
-
-            migrationBuilder.CreateTable(
-                name: "People",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_People", x => x.Id);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TrackingItems_OwnerId",
-                table: "TrackingItems",
-                column: "OwnerId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_TrackingItems_People_OwnerId",
-                table: "TrackingItems",
-                column: "OwnerId",
-                principalTable: "People",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
         }
     }
 }

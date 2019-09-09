@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AsthmaAlertApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20190909020329_AddIdentity")]
-    partial class AddIdentity
+    [Migration("20190909174636_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -116,15 +116,13 @@ namespace AsthmaAlertApi.Migrations
 
                     b.Property<int>("HadAttack");
 
-                    b.Property<int>("OwnerId");
-
-                    b.Property<string>("OwnerId1");
+                    b.Property<string>("OwnerId");
 
                     b.Property<string>("TrackingTitle");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnerId1");
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("TrackingItems");
                 });
@@ -390,7 +388,7 @@ namespace AsthmaAlertApi.Migrations
                 {
                     b.HasOne("AsthmaAlertApi.Models.ApplicationUser", "Owner")
                         .WithMany("TrackingItems")
-                        .HasForeignKey("OwnerId1");
+                        .HasForeignKey("OwnerId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

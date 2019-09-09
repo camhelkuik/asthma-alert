@@ -114,15 +114,13 @@ namespace AsthmaAlertApi.Migrations
 
                     b.Property<int>("HadAttack");
 
-                    b.Property<int>("OwnerId");
-
-                    b.Property<string>("OwnerId1");
+                    b.Property<string>("OwnerId");
 
                     b.Property<string>("TrackingTitle");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnerId1");
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("TrackingItems");
                 });
@@ -388,7 +386,7 @@ namespace AsthmaAlertApi.Migrations
                 {
                     b.HasOne("AsthmaAlertApi.Models.ApplicationUser", "Owner")
                         .WithMany("TrackingItems")
-                        .HasForeignKey("OwnerId1");
+                        .HasForeignKey("OwnerId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
