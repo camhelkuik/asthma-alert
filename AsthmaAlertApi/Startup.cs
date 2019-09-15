@@ -113,6 +113,7 @@ namespace AsthmaAlertApi
                 app.UseCors(builder =>
                 {
                     builder.WithOrigins("http://localhost:4200")
+                    //should be more explicit when in production
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();

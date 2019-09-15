@@ -19,7 +19,8 @@ module.exports = function(environment) {
 
     APP: {
       namespace: 'api/v1',
-      host: 'http://localhost:5000'
+      host: 'http://localhost:5000',
+      tokenPath: 'connect/token'
     }
   };
 
