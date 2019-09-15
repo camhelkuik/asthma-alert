@@ -7,7 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('tracking-items');
+  this.route('login');
+  this.route('s', function(){
+    this.route('tracking-items');
+  });
 });
 
 export default Router;
