@@ -1,5 +1,7 @@
-{{#each model as |item|}}
+{{!-- {{#each model as |item|}}
     {{item.date}} <br>
     {{item.trackingTitle}} <br>
     {{item.hadAttack}} <br>
-{{/each}}
+{{/each}} --}}
+
+{{tracking-item-form trackingItem=model submit=(action "saveAction")}}

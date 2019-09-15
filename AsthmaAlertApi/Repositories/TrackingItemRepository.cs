@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using AsthmaAlertApi.Data;
 using AsthmaAlertApi.Models;
 using AsthmaAlertApi.Services;
+using System.Threading.Tasks;
 
 namespace AsthmaAlertApi.Repositories
 {
@@ -29,6 +30,12 @@ namespace AsthmaAlertApi.Repositories
         public override IQueryable<TrackingItem> Get()
         {
             return base.Get().Where(e => e.OwnerId == _authenticationService.GetUserId());
+        }
+
+        public override async Task<TrackingItem> CreateAsync(TrackingItem trackingItem)
+        {
+            trackingItem.OwnerId = _authenticationService.GetUserId();
+            return await base.CreateAsync(trackingItem);
         }
     }
 }
