@@ -1,7 +1,7 @@
-<form {{action "launchConfrimShown" on="submit"}}>
+<form>
     {{input placeholder="tracking title" value=trackingItem.trackingTitle}}
     {{input placeholder="date" value=trackingItem.date}}
     {{input placeholder="had attack?" value=trackingItem.hadAttack}}
     <br />
-    <input type="submit" value="Add">
+    <input type="submit" value="Add" {{action "save"}}>
 </form>
