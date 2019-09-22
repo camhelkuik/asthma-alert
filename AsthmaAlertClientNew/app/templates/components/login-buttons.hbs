@@ -1,5 +1,5 @@
- {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}>Logout</a>
-  {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-  {{/if}}
+{{#if session.isAuthenticated}}
+        <a class="login-buttons"{{action "invalidateSession"}}>Logout</a>
+{{else}}
+      {{#link-to "login"}}<a class="login-buttons">Login</a>{{/link-to}}
+{{/if}}
