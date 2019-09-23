@@ -15,6 +15,9 @@ namespace AsthmaAlertApi
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+            MyScheduler.IntervalInMinutes(15, 30, 10, () => {
+
+            });
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
