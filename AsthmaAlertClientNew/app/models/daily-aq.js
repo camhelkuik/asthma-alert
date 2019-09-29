@@ -7,9 +7,5 @@ export default DS.Model.extend({
     grass: DS.attr("number"),
     mold: DS.attr("number"),
     ragweed: DS.attr("number"),
-    tree: DS.attr("number"),
-    asthmaValue: DS.attr("number"),
-    asthmaCategory: DS.attr("string"),
-    dustDanderValue: DS.attr("number"),
-    dustDanderCategory: DS.attr("string")
+    tree: DS.attr("number")
 });

@@ -24,17 +24,5 @@ namespace AsthmaAlertApi.Models
 
         [Attr("tree")]
         public int Tree { get; set; }
-
-        [Attr("asthma-value")]
-        public int AsthmaValue { get; set; }
-
-        [Attr("asthma-category")]
-        public string AsthmaCategory { get; set; }
-
-        [Attr("dust-dander-value")]
-        public int DustDanderValue { get; set; }
-
-        [Attr("dust-dander-category")]
-        public string DustDanderCategory { get; set; }
     }
 }
