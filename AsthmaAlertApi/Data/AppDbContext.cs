@@ -14,5 +14,7 @@ namespace  AsthmaAlertApi.Data
         public DbSet<TrackingItem> TrackingItems { get; set; }
 
         public DbSet<DailyAq> DailyAqs { get; set; }
+
+        public DbSet<DustDander> DustDanders { get; set; }
     }
 }

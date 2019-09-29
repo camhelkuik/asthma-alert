@@ -3,15 +3,17 @@ using System;
 using AsthmaAlertApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace AsthmaAlertApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190929180137_SeparatedDailyAq")]
+    partial class SeparatedDailyAq
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,26 +97,6 @@ namespace AsthmaAlertApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("DailyAqs");
-                });
-
-            modelBuilder.Entity("AsthmaAlertApi.Models.DustDander", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("AsthmaCategory");
-
-                    b.Property<int>("AsthmaValue");
-
-                    b.Property<string>("Date");
-
-                    b.Property<string>("DustDanderCategory");
-
-                    b.Property<int>("DustDanderValue");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("DustDanders");
                 });
 
             modelBuilder.Entity("AsthmaAlertApi.Models.TrackingItem", b =>
