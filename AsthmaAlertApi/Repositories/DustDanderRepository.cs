@@ -10,30 +10,31 @@ using System.Threading.Tasks;
 
 namespace AsthmaAlertApi.Repositories
 {
-    public class DailyAqRepository : DefaultEntityRepository<DailyAq>
+    public class DustDanderRepository : DefaultEntityRepository<DustDander>
     {
         private readonly ILogger _logger;
         private readonly AppDbContext _context;
         private readonly IAuthenticationService _authenticationService;
 
-        public DailyAqRepository(AppDbContext context,
+        public DustDanderRepository(AppDbContext context,
             ILoggerFactory loggerFactory,
             IJsonApiContext jsonApiContext,
             IAuthenticationService authenticationService)
         : base(context, loggerFactory, jsonApiContext)
         { 
             _context = context;
-            _logger = loggerFactory.CreateLogger<DailyAqRepository>();
+            _logger = loggerFactory.CreateLogger<DustDanderRepository>();
             _authenticationService = authenticationService;
         }
-        public override IQueryable<DailyAq> Get()
+
+        public override IQueryable<DustDander> Get()
         {
             return base.Get().Where(e => e.Date == System.DateTime.Today.ToString("d"));
         }
 
-        public override async Task<DailyAq> CreateAsync(DailyAq dailyAq)
+        public override async Task<DustDander> CreateAsync(DustDander dustDander)
         {
-            return await base.CreateAsync(dailyAq);
+            return await base.CreateAsync(dustDander);
         }
     }
 }

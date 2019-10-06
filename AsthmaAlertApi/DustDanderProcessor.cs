@@ -1,8 +1,12 @@
 
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using AsthmaAlertApi.Data;
 using AsthmaAlertApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AsthmaAlertApi
 {
@@ -16,8 +20,17 @@ namespace AsthmaAlertApi
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    DustDander result = await response.Content.ReadAsAsync<DustDander>();
+                    var result = await response.Content.ReadAsAsync<DustDander>();
                     //may need to map json to model
+
+                    // var create = DustDanders.Add(new DustDander {
+                    //     Date = System.DateTime.Today.ToString("d"),
+                    //     AsthmaValue = data2[23].Value,
+                    //     AsthmaCategory = result[23].Category,
+                    //     DustDanderValue = result[19].Value,
+                    //     DustDanderCategory = result[19].Category
+                    // });
+
                     return result;
                 }
                 else

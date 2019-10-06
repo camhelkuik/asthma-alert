@@ -19,6 +19,7 @@ namespace AsthmaAlertApi
                     DailyAqResult result = await response.Content.ReadAsAsync<DailyAqResult>();
                     //may need to map json to model
                     return result.Results;
+                    
                 }
                 else
                 {
